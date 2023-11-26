@@ -43,7 +43,7 @@ if(!isset($_SESSION['email_sent'])){
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'testingphase38@gmail.com'; // Your Gmail address
-    $mail->Password   = "kmjg idkc arki jaou"; // Your Gmail password
+    $mail->Password   = ""; // Your Gmail password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
