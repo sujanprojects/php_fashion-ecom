@@ -23,6 +23,7 @@ if(isset($_POST['submit'])){
 
    if($select_user->rowCount() > 0){
       $_SESSION['user_id_to_verify'] = $row['id'];
+      $_SESSION['email_to_verify'] = $email;
       header('Location: mfa.php');
    }else{
       $message[] = 'incorrect username or password!';

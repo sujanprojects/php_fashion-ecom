@@ -43,13 +43,13 @@ if(!isset($_SESSION['email_sent'])){
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'testingphase38@gmail.com'; // Your Gmail address
-    $mail->Password   = ""; // Your Gmail password
+    $mail->Password   = "lcfl illi alsk xcsm"; // Your Gmail password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
     // Sender and recipient settings
     $mail->setFrom('testing38@gmail.com', 'Fashion App');
-    $mail->addAddress('saichaithanya288@gmail.com', 'Sai Chaitanya');
+    $mail->addAddress($_SESSION['email_to_verify'], '');
 
     // Email content
     $mail->isHTML(true);
@@ -75,6 +75,7 @@ if(isset($_POST['submit'])){
 
    if($_SESSION['otp'] == $_POST['otp']){
     $_SESSION['user_id'] = $_SESSION['user_id_to_verify'];
+    $_SESSION['email'] = $_SESSION['email_to_verify'];
     header('location:home.php');
    }
    else{
