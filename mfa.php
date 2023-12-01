@@ -49,7 +49,7 @@ if(!isset($_SESSION['email_sent'])){
 
     // Sender and recipient settings
     $mail->setFrom('testing38@gmail.com', 'Fashion App');
-    $mail->addAddress($_SESSION['email_to_verify'], '');
+    $mail->addAddress($_SESSION['email_to_verify'], 'Email');
 
     // Email content
     $mail->isHTML(true);
